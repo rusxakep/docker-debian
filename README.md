@@ -1,13 +1,13 @@
-# hub.docker.com/r/tiredofit/debian
+# hub.docker.com/r/rusxakep/debian
 
 [![Build 
-Status](https://img.shields.io/docker/build/tiredofit/debian.svg)](https://hub.docker.com/r/tiredofit/debian)
+Status](https://img.shields.io/docker/cloud/build/rusxakep/debian.svg)](https://hub.docker.com/r/rusxakep/debian)
 [![Docker 
-Pulls](https://img.shields.io/docker/pulls/tiredofit/debian.svg)](https://hub.docker.com/r/tiredofit/debian)
+Pulls](https://img.shields.io/docker/pulls/rusxakep/debian.svg)](https://hub.docker.com/r/rusxakep/debian)
 [![Docker 
-Stars](https://img.shields.io/docker/stars/tiredofit/debian.svg)](https://hub.docker.com/r/tiredofit/debian)
+Stars](https://img.shields.io/docker/stars/rusxakep/debian.svg)](https://hub.docker.com/r/rusxakep/debian)
 [![Docker 
-Layers](https://images.microbadger.com/badges/image/tiredofit/debian.svg)]
+Layers](https://images.microbadger.com/badges/image/rusxakep/debian.svg)]
 
 # Introduction
 
