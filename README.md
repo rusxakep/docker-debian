@@ -1,8 +1,8 @@
-# hub.docker.com/r/tiredofit/debian
+# hub.docker.com/r/rusxakep/debian
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/tiredofit/debian.svg)](https://hub.docker.com/r/tiredofit/debian)
-[![Docker Stars](https://img.shields.io/docker/stars/tiredofit/debian.svg)](https://hub.docker.com/r/tiredofit/debian)
-[![Docker Layers](https://images.microbadger.com/badges/image/tiredofit/debian.svg)](https://microbadger.com/images/tiredofit/debian)
+[![Docker Pulls](https://img.shields.io/docker/pulls/rusxakep/debian.svg)](https://hub.docker.com/r/rusxakep/debian)
+[![Docker Stars](https://img.shields.io/docker/stars/rusxakep/debian.svg)](https://hub.docker.com/r/rusxakep/debian)
+[![Docker Layers](https://images.microbadger.com/badges/image/rusxakep/debian.svg)](https://microbadger.com/images/rusxakep/debian)
 
 Dockerfile to build an [debian](https://www.debian.org/) container image to use used as a base for building other images.
 
@@ -38,10 +38,10 @@ Dockerfile to build an [debian](https://www.debian.org/) container image to use 
 
 ## Installation
 
-Automated builds of the image are available on [Docker Hub](https://hub.docker.com/r/tiredofit/debian)
+Automated builds of the image are available on [Docker Hub](https://hub.docker.com/r/rusxakep/debian)
 
 ```bash
-docker pull tiredofit/debian:(imagetag)
+docker pull rusxakep/debian:(imagetag)
 ```
 
 The following image tags are available:
