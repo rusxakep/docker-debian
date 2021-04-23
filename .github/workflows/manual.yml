@@ -2,10 +2,8 @@
 name: 'Manual build'
 
 on:
-  push:
-    paths:
-      - '**'
-      - '!README.md'
+  workflow_dispatch:
+
 jobs:
   buster:
     env:
