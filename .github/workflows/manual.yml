@@ -1,12 +1,11 @@
 # Manual Workflow tiredofit/docker-debian
-name: Manual
+name: 'Manual build'
 
 on:
-  workflow_dispatch:
-    inputs:
-      Manual Build:
-        description: 'Manual Build'
-        required: false
+  push:
+    paths:
+      - '**'
+      - '!README.md'
 jobs:
   buster:
     env:
