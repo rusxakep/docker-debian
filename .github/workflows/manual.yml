@@ -21,7 +21,7 @@ jobs:
             BRANCH=${GITHUB_REF#refs/heads/}
 
             case ${BRANCH} in
-              "main" | "master" | "*-master" )
+              main|master|*-master)
                   if [ -n "${{ secrets.LATEST }}" ] ; then
                     if [ "${RELEASE}" = "${{ secrets.LATEST }}" ]; then
                       BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest,${DOCKER_IMAGE}:latest"
@@ -32,10 +32,10 @@ jobs:
                      BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest"
                   fi
                 ;;
-              "develop" | "*-develop" )
+              develop|*-develop)
                   BRANCHTAG="${DOCKER_IMAGE}:develop"
                 ;;
-              * )
+              *)
                   if [ -n "${{ secrets.LATEST }}" ] ; then
                     if [ "${BRANCHTAG}" = "${{ secrets.LATEST }}" ]; then
                       BRANCHTAG="${DOCKER_IMAGE}:${BRANCH},${DOCKER_IMAGE}:${BRANCH}-latest,${DOCKER_IMAGE}:latest"
@@ -129,7 +129,7 @@ jobs:
             BRANCH=${GITHUB_REF#refs/heads/}
 
             case ${BRANCH} in
-              "main" | "master" )
+              main|master|*-master)
                   if [ -n "${{ secrets.LATEST }}" ] ; then
                     if [ "${RELEASE}" = "${{ secrets.LATEST }}" ]; then
                       BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest,${DOCKER_IMAGE}:latest"
@@ -140,10 +140,10 @@ jobs:
                      BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest"
                   fi
                 ;;
-              "develop" )
+              develop|*-develop)
                   BRANCHTAG="${DOCKER_IMAGE}:develop"
                 ;;
-              * )
+              *)
                   if [ -n "${{ secrets.LATEST }}" ] ; then
                     if [ "${BRANCHTAG}" = "${{ secrets.LATEST }}" ]; then
                       BRANCHTAG="${DOCKER_IMAGE}:${BRANCH},${DOCKER_IMAGE}:${BRANCH}-latest,${DOCKER_IMAGE}:latest"
@@ -237,7 +237,7 @@ jobs:
             BRANCH=${GITHUB_REF#refs/heads/}
 
             case ${BRANCH} in
-              "main" | "master" | "*-master")
+              main|master|*-master)
                   if [ -n "${{ secrets.LATEST }}" ] ; then
                     if [ "${RELEASE}" = "${{ secrets.LATEST }}" ]; then
                       BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest,${DOCKER_IMAGE}:latest"
@@ -248,10 +248,10 @@ jobs:
                      BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest"
                   fi
                 ;;
-              "develop" | "*-develop" )
+              develop|*-develop)
                   BRANCHTAG="${DOCKER_IMAGE}:develop"
                 ;;
-              * )
+              *)
                   if [ -n "${{ secrets.LATEST }}" ] ; then
                     if [ "${BRANCHTAG}" = "${{ secrets.LATEST }}" ]; then
                       BRANCHTAG="${DOCKER_IMAGE}:${BRANCH},${DOCKER_IMAGE}:${BRANCH}-latest,${DOCKER_IMAGE}:latest"
