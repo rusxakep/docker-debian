@@ -8,8 +8,8 @@ on:
     - cron: 1 0 * * 6
   push:
     paths:
-    - '**'
-    - '!README.md'
+      - '**'
+      - '!README.md'
 jobs:
   buster:
     env:
@@ -27,7 +27,7 @@ jobs:
             BRANCH=${GITHUB_REF#refs/heads/}
 
             case ${BRANCH} in
-              "main" | "master" )
+              main | master | *-master )
                   if [ -n "${{ secrets.LATEST }}" ] ; then
                     if [ "${RELEASE}" = "${{ secrets.LATEST }}" ]; then
                       BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest,${DOCKER_IMAGE}:latest"
@@ -38,7 +38,7 @@ jobs:
                      BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest"
                   fi
                 ;;
-              "develop" )
+              develop | *-develop )
                   BRANCHTAG="${DOCKER_IMAGE}:develop"
                 ;;
               * )
@@ -116,7 +116,7 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
+          platforms: linux/386,linux/amd64,linux/arm/v5,linux/arm/v7,linux/arm64/v8,linux/mips64le,linux/ppc64le,linux/s390x
           push: true
           tags: ${{ steps.prep.outputs.tags }}
   stretch:
@@ -135,7 +135,7 @@ jobs:
             BRANCH=${GITHUB_REF#refs/heads/}
 
             case ${BRANCH} in
-              "main" | "master" )
+              main | master | *-master )
                   if [ -n "${{ secrets.LATEST }}" ] ; then
                     if [ "${RELEASE}" = "${{ secrets.LATEST }}" ]; then
                       BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest,${DOCKER_IMAGE}:latest"
@@ -146,7 +146,7 @@ jobs:
                      BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest"
                   fi
                 ;;
-              "develop" )
+              develop | *-develop )
                   BRANCHTAG="${DOCKER_IMAGE}:develop"
                 ;;
               * )
@@ -224,7 +224,7 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
+          platforms: linux/386,linux/amd64,linux/arm/v5,linux/arm/v7,linux/arm64/v8
           push: true
           tags: ${{ steps.prep.outputs.tags }}
   jessie:
@@ -243,7 +243,7 @@ jobs:
             BRANCH=${GITHUB_REF#refs/heads/}
 
             case ${BRANCH} in
-              "main" | "master" )
+              main | master | *-master )
                   if [ -n "${{ secrets.LATEST }}" ] ; then
                     if [ "${RELEASE}" = "${{ secrets.LATEST }}" ]; then
                       BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest,${DOCKER_IMAGE}:latest"
@@ -254,7 +254,7 @@ jobs:
                      BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest"
                   fi
                 ;;
-              "develop" )
+              develop | *-develop )
                   BRANCHTAG="${DOCKER_IMAGE}:develop"
                 ;;
               * )
@@ -332,6 +332,6 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm/v7
+          platforms: linux/386,linux/amd64,linux/arm/v5,linux/arm/v7
           push: true
           tags: ${{ steps.prep.outputs.tags }}
