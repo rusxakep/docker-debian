@@ -1,3 +1,28 @@
+## 6.1.2 2021-05-18 <dave at tiredofit dot ca>
+
+   ### Added
+      - Zabbix Agent 5.4.0
+
+
+## 6.1.1 2021-05-18 <dave at tiredofit dot ca>
+
+   ### Added
+      - Add bullseye builds
+      - Zabbix Agent 5.2.6
+
+
+## 6.1.0 2021-05-01 <dave at tiredofit dot ca>
+
+   ### Added
+      - Start compiling Zabbix Agent due to too many issues with repositories and multi arch
+
+
+## 6.0.4 2021-05-01 <dave at tiredofit dot ca>
+
+   ### Reverted
+      - Remove routine that inserts (distrib)-backports. Was causing too many problems for debian/buster with SSL
+
+
 ## 6.0.3 2021-04-20 <dave at tiredofit dot ca>
 
    ### Changed
