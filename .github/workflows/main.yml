@@ -146,7 +146,7 @@ jobs:
                      BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest"
                   fi
                 ;;
-              develop | *-develop )
+              develop )
                   BRANCHTAG="${DOCKER_IMAGE}:develop"
                 ;;
               * )
@@ -224,7 +224,7 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
           file: ./Dockerfile
-          platforms: linux/386,linux/amd64,linux/arm/v5,linux/arm/v7,linux/arm64/v8,linux/mips64le,linux/ppc64le,linux/s390x
+          platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
           push: true
           tags: ${{ steps.prep.outputs.tags }}
   stretch:
@@ -254,7 +254,7 @@ jobs:
                      BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest"
                   fi
                 ;;
-              develop | *-develop )
+              develop )
                   BRANCHTAG="${DOCKER_IMAGE}:develop"
                 ;;
               * )
@@ -332,7 +332,7 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
           file: ./Dockerfile
-          platforms: linux/386,linux/amd64,linux/arm/v5,linux/arm/v7,linux/arm64/v8
+          platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
           push: true
           tags: ${{ steps.prep.outputs.tags }}
   jessie:
@@ -362,7 +362,7 @@ jobs:
                      BRANCHTAG="${DOCKER_IMAGE}:${RELEASE},${DOCKER_IMAGE}:${RELEASE}-latest"
                   fi
                 ;;
-              develop | *-develop )
+              develop )
                   BRANCHTAG="${DOCKER_IMAGE}:develop"
                 ;;
               * )
@@ -440,6 +440,6 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
           file: ./Dockerfile
-          platforms: linux/386,linux/amd64,linux/arm/v5,linux/arm/v7
+          platforms: linux/amd64,linux/arm/v7
           push: true
           tags: ${{ steps.prep.outputs.tags }}
