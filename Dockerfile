@@ -1,5 +1,5 @@
 FROM debian:buster
-LABEL maintainer="Dave Conroy (dave at tiredofit dot ca)"
+LABEL maintainer="Mikhail Baykov (github.com/rusxakep)"
 
 ### Set defaults
 ARG S6_OVERLAY_VERSION=v2.2.0.3

@@ -1,9 +1,9 @@
-# github.com/tiredofit/docker-debian
+# github.com/rusxakep/docker-debian
 
-[![GitHub release](https://img.shields.io/github/v/tag/tiredofit/docker-debian?style=flat-square)](https://github.com/tiredofit/docker-debian/releases/latest)
-[![Build Status](https://img.shields.io/github/workflow/status/tiredofit/docker-debian/build?style=flat-square)](https://github.com/tiredofit/docker-debian/actions?query=workflow%3Abuild)
-[![Docker Stars](https://img.shields.io/docker/stars/tiredofit/debian.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tiredofit/debian/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/tiredofit/debian.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/tiredofit/debian/)
+[![GitHub release](https://img.shields.io/github/v/tag/rusxakep/docker-debian?style=flat-square)](https://github.com/rusxakep/docker-debian/releases/latest)
+[![Build Status](https://img.shields.io/github/workflow/status/rusxakep/docker-debian/build?style=flat-square)](https://github.com/rusxakep/docker-debian/actions?query=workflow%3Abuild)
+[![Docker Stars](https://img.shields.io/docker/stars/rusxakep/debian.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/rusxakep/debian/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/rusxakep/debian.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/rusxakep/debian/)
 [![Become a sponsor](https://img.shields.io/badge/sponsor-tiredofit-181717.svg?logo=github&style=flat-square)](https://github.com/sponsors/tiredofit)
 [![Paypal Donate](https://img.shields.io/badge/donate-paypal-00457c.svg?logo=paypal&style=flat-square)](https://www.paypal.me/tiredofit)
 
@@ -19,6 +19,7 @@ Dockerfile to build an [debian](https://www.debian.org/) container image to be u
 ## Maintainer
 
 - [Dave Conroy](https://github.com/tiredofit)
+- [Mikhail Baykov](https://github.com/rusxakep)
 
 ## Table of Contents
 
@@ -57,10 +58,10 @@ No prerequisites required
 Clone this repository and build the image with `docker build <arguments> (imagename) .`
 
 ### Prebuilt Images
-Builds of the image are available on [Docker Hub](https://hub.docker.com/r/tiredofit/debian) and is the recommended method of installation.
+Builds of the image are available on [Docker Hub](https://hub.docker.com/r/rusxakep/debian) and is the recommended method of installation.
 
 ```bash
-docker pull tiredofit/debian:(imagetag)
+docker pull rusxakep/debian:(imagetag)
 ```
 
 The following image tags are available along with their tagged release based on what's written in the [Changelog](CHANGELOG.md):
